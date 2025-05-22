@@ -1,0 +1,48 @@
+$bg: #1e1e1e;
+$primary: #9C27B0;
+$text: #fff;
+
+.contact {
+  background: $bg;
+  color: $text;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  text-align: center;
+
+  h2 {
+    color: $primary;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input,
+    textarea {
+      padding: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      background: #2c2c2c;
+      color: white;
+    }
+
+    button {
+      background: $primary;
+      border: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: lighten($primary, 10%);
+      }
+    }
+  }
+}

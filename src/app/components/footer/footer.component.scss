@@ -1,0 +1,11 @@
+$footer-bg: #111;
+$text-color: #ccc;
+
+.site-footer {
+  background: $footer-bg;
+  color: $text-color;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #2c2c2c;
+}
