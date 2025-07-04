@@ -1,11 +1,24 @@
 <nav class="navbar">
   <div class="logo">i2i</div>
   <ul class="nav-links">
-    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    <li>
+      <a routerLink="/home" routerLinkActive="active" #rla="routerLinkActive"
+         [class.underline]="rla.isActive">Home</a>
+    </li>
+    <li>
+      <a routerLink="/about" routerLinkActive="active" #rla="routerLinkActive"
+         [class.underline]="rla.isActive">About</a>
+    </li>
+    <li>
+      <a routerLink="/contact" routerLinkActive="active" #rla="routerLinkActive"
+         [class.underline]="rla.isActive">Contact</a>
+    </li>
   </ul>
-  <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+  <div class="menu-toggle" [class.open]="isMenuOpen" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>
 
 <ul class="mobile-menu" [class.open]="isMenuOpen">

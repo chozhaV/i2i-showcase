@@ -14,6 +14,7 @@ $dark: #121212;
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
 
   .logo {
     font-size: 1.5rem;
@@ -84,3 +85,153 @@ $dark: #121212;
     display: block;
   }
 }
+
+
+/* ...existing code... */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #222;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.nav-links li a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2px;
+  background: #00e6e6;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+  transform-origin: left;
+}
+
+.nav-links li a:hover,
+.nav-links li a.underline,
+.nav-links li a.active {
+  color: #00e6e6;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.underline::after,
+.nav-links li a.active::after {
+  transform: scaleX(1);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0; right: 0;
+  width: 70vw;
+  max-width: 320px;
+  height: 100vh;
+  background: #222;
+  box-shadow: -2px 0 20px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 4rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1), opacity 0.3s;
+  z-index: 15;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.mobile-menu li a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 2px;
+  background: #00e6e6;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+  transform-origin: left;
+}
+
+.mobile-menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ...existing code... */
