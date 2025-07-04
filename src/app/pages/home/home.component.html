@@ -1,39 +1,47 @@
-<section class="hero" appScrollAnimate>
-  <h1>Welcome to i2i</h1>
-  <p>We build smart, connected devices for the future.</p>
-</section>
+<div class="home-container">
+  <!-- <section class="hero" appScrollAnimate>
+    <h1>Welcome to i2i</h1>
+    <p>We build smart, connected devices for the future.</p>
+  </section> -->
 
-<section class="features-grid">
-  <div class="feature-card" appScrollAnimate [animationDelay]="'0.2s'">
-    <h3>Innovative Teaching</h3>
-    <p>
-      Refers to creative or modern instructional strategies, such as project-based learning, flipped classrooms, or the integration of technology (like interactive apps or online platforms) to engage students more effectively.
-    </p>
-  </div>
+  <section class="features-grid">
+    <div class="feature-card" appScrollAnimate [animationDelay]="'0.2s'">
+      <h3>Innovative Teaching</h3>
+      <p>
+        Refers to creative or modern instructional strategies, such as
+        project-based learning, flipped classrooms, or the integration of
+        technology (like interactive apps or online platforms) to engage
+        students more effectively.
+      </p>
+    </div>
 
-  <div class="feature-card" appScrollAnimate [animationDelay]="'0.4s'">
-    <h3>Learning Solutions</h3>
-    <p>
-      Encompasses tools, platforms, or resources that help students learn better—these could be e-learning platforms, adaptive learning software, digital content, or collaborative tools.
-    </p>
-  </div>
+    <div class="feature-card" appScrollAnimate [animationDelay]="'0.4s'">
+      <h3>Learning Solutions</h3>
+      <p>
+        Encompasses tools, platforms, or resources that help students learn
+        better—these could be e-learning platforms, adaptive learning software,
+        digital content, or collaborative tools.
+      </p>
+    </div>
 
-  <div class="feature-card" appScrollAnimate [animationDelay]="'0.6s'">
-    <h3>For Education</h3>
-    <p>
-      Indicates that these innovations are specifically targeted at schools, universities, or other educational institutions.
-    </p>
-  </div>
-</section>
-<section class="products">
-  <div
-    class="product-card"
-    *ngFor="let product of products; index as i"
-    appScrollAnimate
-    [animationDelay]="(i * 0.1) + 's'"
-  >
-    <img [src]="product.image" [alt]="product.name" />
-    <h3>{{ product.name }}</h3>
-    <p>SKU: {{ product.sku }}</p>
-  </div>
-</section>
+    <div class="feature-card" appScrollAnimate [animationDelay]="'0.6s'">
+      <h3>For Education</h3>
+      <p>
+        Indicates that these innovations are specifically targeted at schools,
+        universities, or other educational institutions.
+      </p>
+    </div>
+  </section>
+  <section class="products">
+    <div
+      class="product-card"
+      *ngFor="let product of products; index as i"
+      appScrollAnimate
+      [animationDelay]="i * 0.1 + 's'"
+    >
+      <img [src]="product.image" [alt]="product.name" />
+      <h3>{{ product.name }}</h3>
+      <p>SKU: {{ product.sku }}</p>
+    </div>
+  </section>
+</div>

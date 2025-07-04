@@ -1,3 +1,14 @@
-<app-navbar />
-<router-outlet />
-<app-footer />
+<div class="home">
+  <video autoplay muted loop class="bgVideo" #bgVideo>
+    <source src="../assets/bg_video.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  @if(isShow){
+  <button (click)="toggleVideo(bgVideo)">
+    {{ isPaused ? "Play" : "Pause" }}
+  </button>
+  }
+  <app-navbar />
+  <router-outlet />
+  <app-footer />
+</div>
