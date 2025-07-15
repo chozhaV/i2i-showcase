@@ -152,9 +152,9 @@ import { Subject, takeUntil } from 'rxjs';
                   <div>
                     <h3 class="text-lg font-semibold text-white mb-1">Office Address</h3>
                     <p class="text-dark-400">
-                      123 Technology Street<br>
-                      Smart City, SC 12345<br>
-                      United States
+                      No:34, Karnan St,<br>
+                      Selliamman Nagar, Otteri, <br>
+                      Killambakkam, Vandalur, Tamil Nadu - 600048.
                     </p>
                   </div>
                 </div>
@@ -168,8 +168,8 @@ import { Subject, takeUntil } from 'rxjs';
                   <div>
                     <h3 class="text-lg font-semibold text-white mb-1">Phone</h3>
                     <p class="text-dark-400">
-                      +1 (555) 123-4567<br>
-                      +1 (555) 123-4568 (Support)
+                      +91 95663 48780<br>
+                      +91 99625 45546
                     </p>
                   </div>
                 </div>
@@ -183,24 +183,7 @@ import { Subject, takeUntil } from 'rxjs';
                   <div>
                     <h3 class="text-lg font-semibold text-white mb-1">Email</h3>
                     <p class="text-dark-400">
-                      info&#64;i2ismartenterprises.com<br>
-                      support&#64;i2ismartenterprises.com
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                  <div class="w-12 h-12 bg-warning-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="text-lg font-semibold text-white mb-1">Business Hours</h3>
-                    <p class="text-dark-400">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br>
-                      Saturday: 10:00 AM - 4:00 PM<br>
-                      Sunday: Closed
+                      i2ismartenterprises&#64;gmail.com
                     </p>
                   </div>
                 </div>

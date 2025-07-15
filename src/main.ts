@@ -15,7 +15,7 @@ import { ContactComponent } from './app/pages/contact/contact.component';
   standalone: true,
   imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
   template: `
-    <div class="min-h-screen bg-dark-900 text-white">
+    <div class="min-h-screen bg-dark-700 text-white">
       <app-header></app-header>
       <main>
         <router-outlet></router-outlet>

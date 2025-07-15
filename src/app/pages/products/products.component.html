@@ -1,0 +1,70 @@
+<div class="pt-24 pb-12">
+  <div class="container mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="section-title">Our Products</h1>
+      <p class="section-subtitle">
+        Discover our comprehensive range of smart technology solutions designed
+        to meet your business needs
+      </p>
+    </div>
+
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <app-product-card
+        *ngFor="let product of filteredProducts; let i = index"
+        [product]="product"
+        [style.--animation-order]="i"
+        class="stagger-animation animate-on-scroll"
+      >
+      </app-product-card>
+    </div>
+
+    <!-- No Results -->
+    <div *ngIf="filteredProducts.length === 0" class="text-center py-12">
+      <div class="text-6xl mb-4">🔍</div>
+      <h3 class="text-2xl font-semibold text-white mb-2">No products found</h3>
+      <p class="text-dark-400 mb-6">
+        Try adjusting your search or filter criteria
+      </p>
+      <button class="btn-primary" (click)="clearFilters()">
+        Clear Filters
+      </button>
+    </div>
+
+    <!-- Load More -->
+    <div *ngIf="filteredProducts.length > 0 && hasMore" class="text-center">
+      <button
+        class="btn-secondary px-8 py-4"
+        (click)="loadMore()"
+        [disabled]="loading"
+      >
+        <span *ngIf="!loading">Load More Products</span>
+        <span *ngIf="loading" class="flex items-center">
+          <svg
+            class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+          Loading...
+        </span>
+      </button>
+    </div>
+  </div>
+</div>

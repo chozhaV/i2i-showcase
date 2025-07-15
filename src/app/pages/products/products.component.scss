@@ -1,0 +1,7 @@
+.filter-btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-300 border border-dark-600 text-dark-300 hover:text-white hover:border-primary-500;
+}
+
+.filter-btn.active {
+  @apply bg-primary-500 text-white border-primary-500;
+}

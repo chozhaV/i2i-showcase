@@ -23,9 +23,9 @@ export class ProductService {
         id: '1',
         name: 'Security Camera System',
         sku: 'CAM-001',
-        description: 'High-definition security camera with night vision and motion detection',
+        description: 'High-definition security camera with night vision',
         category: 'security',
-        image: 'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: '../../../assets/products/product1.png',
         features: ['4K Resolution', 'Night Vision', 'Motion Detection', 'Weather Resistant'],
         specifications: {
           'Resolution': '4K Ultra HD',
@@ -39,7 +39,7 @@ export class ProductService {
         sku: 'IFP-001',
         description: 'Smart interactive display for modern classrooms and meeting rooms',
         category: 'education',
-        image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: '../../../assets/products/product2.png',
         features: ['Touch Screen', 'Multi-User Support', 'Wireless Connectivity', 'Built-in Apps'],
         specifications: {
           'Screen Size': '65" - 86"',
@@ -53,7 +53,7 @@ export class ProductService {
         sku: 'IPD-001',
         description: 'Professional pen display for digital art and design work',
         category: 'education',
-        image: 'https://images.pexels.com/photos/265152/pexels-photo-265152.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: '../../../assets/products/product3.png',
         features: ['Pressure Sensitivity', 'Tilt Support', 'Color Accuracy', 'Ergonomic Design'],
         specifications: {
           'Screen Size': '15.6" - 27"',
@@ -67,7 +67,7 @@ export class ProductService {
         sku: 'GB-001',
         description: 'Eco-friendly interactive whiteboard with smart features',
         category: 'education',
-        image: 'https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: '../../../assets/products/product4.png',
         features: ['Eco-Friendly', 'Smart Recognition', 'Multi-Touch', 'Easy Installation'],
         specifications: {
           'Size': '78" - 100"',
@@ -81,7 +81,7 @@ export class ProductService {
         sku: 'LTP-001',
         description: 'High-brightness projector for large venues and auditoriums',
         category: 'education',
-        image: 'https://images.pexels.com/photos/2240763/pexels-photo-2240763.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: '../../../assets/products/product5.png',
         features: ['High Brightness', 'Long Throw Distance', '4K Support', 'Laser Technology'],
         specifications: {
           'Brightness': '5000+ Lumens',
@@ -95,7 +95,7 @@ export class ProductService {
         sku: 'BAS-001',
         description: 'Advanced biometric security system with fingerprint and facial recognition',
         category: 'security',
-        image: 'https://images.pexels.com/photos/2877297/pexels-photo-2877297.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: '../../../assets/products/product6.png',
         features: ['Fingerprint Scanner', 'Facial Recognition', 'Access Control', 'Audit Trail'],
         specifications: {
           'Recognition Speed': '<1 Second',

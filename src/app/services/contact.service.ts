@@ -18,7 +18,7 @@ export class ContactService {
 
   constructor() {
     // Initialize EmailJS with your public key
-    // emailjs.init('YOUR_PUBLIC_KEY');
+    emailjs.init('X5oXaZISmkzQpuZVM');
   }
 
   async sendContactForm(formData: ContactForm): Promise<boolean> {
@@ -29,7 +29,7 @@ export class ContactService {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // In production, uncomment and configure EmailJS:
-      /*
+      
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -43,7 +43,7 @@ export class ContactService {
         'YOUR_TEMPLATE_ID',
         templateParams
       );
-      */
+      
 
       console.log('Contact form submitted:', formData);
       this.loadingSubject.next(false);

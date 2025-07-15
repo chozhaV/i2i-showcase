@@ -99,3 +99,42 @@ $text: #fff;
 }
 
 
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+
+  span {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-bottom: 3px solid #00fff7;
+    border-right: 3px solid #00fff7;
+    transform: rotate(45deg);
+    margin-bottom: 4px;
+    animation: scrollDown 1.2s infinite;
+    opacity: 0.8;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0.2;
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(12px) rotate(45deg);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateY(0) rotate(45deg);
+  }
+}
+

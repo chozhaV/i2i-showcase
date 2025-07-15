@@ -1,6 +1,6 @@
 $product-bg: #2e2e2e;
 $hover-bg: #383838;
-$primary: #9C27B0;
+$primary: #9c27b0;
 $white: #ffffff;
 
 .product-card {
@@ -32,4 +32,10 @@ $white: #ffffff;
     background: $hover-bg;
     transform: scale(1.03);
   }
+}
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
