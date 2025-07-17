@@ -10,3 +10,13 @@ $text-color: #ccc;
   border-top: 1px solid #2c2c2c;
   background: rgba(0, 0, 0, 0.5);
 }
+
+.footer-link {
+  color: #333; /* Replace with your dark-400 color */
+  font-size: 0.875rem; /* text-sm */
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #007bff; /* Replace with your primary-400 color */
+}
