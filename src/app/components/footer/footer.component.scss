@@ -12,11 +12,5 @@ $text-color: #ccc;
 }
 
 .footer-link {
-  color: #333; /* Replace with your dark-400 color */
-  font-size: 0.875rem; /* text-sm */
-  transition: color 0.3s;
-}
-
-.footer-link:hover {
-  color: #007bff; /* Replace with your primary-400 color */
+  @apply text-dark-400 hover:text-primary-400 transition-colors duration-300 text-sm;
 }

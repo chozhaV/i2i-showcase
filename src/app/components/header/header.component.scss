@@ -1,27 +1,7 @@
 .nav-link {
-  color: #4B5563; /* text-dark-300 */
-  transition-property: color;
-  transition-duration: 300ms;
-  font-weight: 500; /* font-medium */
-}
-
-.nav-link:hover {
-  color: #fff; /* hover:text-white */
+  @apply text-dark-300 hover:text-white transition-colors duration-300 font-medium;
 }
 
 .mobile-nav-link {
-  display: block;
-  padding-top: 0.5rem; /* py-2 */
-  padding-bottom: 0.5rem;
-  padding-left: 1rem; /* px-4 */
-  padding-right: 1rem;
-  color: #4B5563; /* text-dark-300 */
-  border-radius: 0.5rem; /* rounded-lg */
-  transition-property: all;
-  transition-duration: 300ms;
-}
-
-.mobile-nav-link:hover {
-  color: #fff; /* hover:text-white */
-  background-color: #1F2937; /* hover:bg-dark-800 */
+  @apply block py-2 px-4 text-dark-300 hover:text-white hover:bg-dark-800 rounded-lg transition-all duration-300;
 }
