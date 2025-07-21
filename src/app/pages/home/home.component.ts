@@ -48,7 +48,7 @@ import { Subject, takeUntil } from "rxjs";
             class="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button
-              class="btn-primary text-lg px-8 py-4"
+              class="i2i-light-button text-lg px-8 py-4"
               (click)="scrollToProducts()"
             >
               Explore Products
@@ -237,21 +237,16 @@ import { Subject, takeUntil } from "rxjs";
     <!-- CTA Section -->
     <section class="py-20">
       <div class="container mx-auto px-4">
-        <div
-          class="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 md:p-12 text-center"
-        >
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div class="bg-white rounded-2xl p-8 md:p-12 text-center card">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-600 mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
             Get in touch with our experts to discuss your technology needs and
             discover how we can help you achieve your goals.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              class="bg-white text-primary-600 hover:bg-primary-50 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              routerLink="/contact"
-            >
+            <button class="i2i-light-button" routerLink="/contact">
               Contact Us Today
             </button>
           </div>
@@ -261,6 +256,39 @@ import { Subject, takeUntil } from "rxjs";
   `,
   styles: [
     `
+    div.card {
+      box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19)
+    }
+    .i2i-light-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: white;
+      color: #004A99;
+      border: 2px solid #004A99;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-weight: 600;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .i2i-light-button img {
+      height: 22px;
+      width: auto;
+    }
+
+    .i2i-light-button:hover {
+      background-color: #004A99;
+      color: white;
+    }
+
+    .i2i-light-button:active {
+      transform: scale(0.98);
+    }
+
       .product-item {
         opacity: 0;
         transform: translateY(50px);
@@ -398,6 +426,27 @@ import { Subject, takeUntil } from "rxjs";
         .product-item.reverse .product-details {
           order: initial;
         }
+      }
+
+      .button-brand {
+        color: #fff;
+        background: #43b02a;           /* Green from logo */
+        border: 2px solid #ffd600;     /* Yellow from logo */
+        padding: 0.75rem 2rem;
+        border-radius: 0.75rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s;
+        outline: none;
+        box-shadow: none;
+        display: inline-block;
+      }
+
+      .button-brand:hover,
+      .button-brand:focus {
+        background: #388e1c;           /* Darker green on hover */
+        border-color: #ffea00;         /* Lighter yellow on hover */
       }
     `,
   ],

@@ -55,7 +55,7 @@ import { RouterModule, Router } from "@angular/router";
             >
               Contact
             </a>
-            <button class="btn-primary w-full" (click)="navigateToContact()">
+            <button class="i2i-light-button" (click)="navigateToContact()">
               <span (click)="navigateToContact()">Get Quote</span>
             </button>
           </div>
@@ -119,7 +119,7 @@ import { RouterModule, Router } from "@angular/router";
             </a>
             <div class="pt-2">
               <button
-                class="btn-primary w-full"
+                class="i2i-light-button"
                 (click)="navigateToContact(); closeMobileMenu()"
               >
                 Get Quote
@@ -139,6 +139,35 @@ import { RouterModule, Router } from "@angular/router";
       .mobile-nav-link {
         @apply block py-2 px-4 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-all duration-300;
       }
+      .i2i-light-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: white;
+        color: #004A99;
+        border: 2px solid #004A99;
+        border-radius: 8px;
+        padding: 14px 18px;
+        font-weight: 600;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .i2i-light-button img {
+        height: 22px;
+        width: auto;
+      }
+
+      .i2i-light-button:hover {
+        background-color: #004A99;
+        color: white;
+      }
+
+      .i2i-light-button:active {
+        transform: scale(0.98);
+      }
+
     `,
   ],
 })
