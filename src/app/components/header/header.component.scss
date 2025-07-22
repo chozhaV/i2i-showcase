@@ -5,19 +5,3 @@
 .mobile-nav-link {
   @apply block py-2 px-4 text-dark-300 hover:text-white hover:bg-dark-800 rounded-lg transition-all duration-300;
 }
-
-.i2i-light-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: white;
-  color: #004A99;
-  border: 2px solid #004A99;
-  border-radius: 8px;
-  padding: 14px 18px;
-  font-weight: 600;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}

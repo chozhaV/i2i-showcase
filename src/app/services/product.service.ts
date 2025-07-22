@@ -20,26 +20,6 @@ export class ProductService {
   private loadProducts(): void {
     const products: Product[] = [
       {
-        id: "1",
-        name: "Security Camera System",
-        sku: "CAM-001",
-        description:
-          "High-definition security camera with night vision and motion detection",
-        category: "security",
-        image: "assets/products/product1.png",
-        features: [
-          "4K Resolution",
-          "Night Vision",
-          "Motion Detection",
-          "Weather Resistant",
-        ],
-        specifications: {
-          Resolution: "4K Ultra HD",
-          Storage: "Cloud & Local",
-          Connectivity: "WiFi/Ethernet",
-        },
-      },
-      {
         id: "2",
         name: "Interactive Flat Panel",
         sku: "IFP-001",
@@ -57,6 +37,26 @@ export class ProductService {
           "Screen Size": "All Sizes Available",
           "Touch Points": "Any Point",
           OS: "Advanced Android OS",
+        },
+      },
+      {
+        id: "1",
+        name: "Security Camera System",
+        sku: "CAM-001",
+        description:
+          "High-definition security camera with night vision and motion detection",
+        category: "security",
+        image: "assets/products/product1.png",
+        features: [
+          "4K Resolution",
+          "Night Vision",
+          "Motion Detection",
+          "Weather Resistant",
+        ],
+        specifications: {
+          Resolution: "4K Ultra HD",
+          Storage: "Cloud & Local",
+          Connectivity: "WiFi/Ethernet",
         },
       },
       {

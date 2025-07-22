@@ -1,9 +1,9 @@
-import { Component } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: "app-footer",
+  selector: 'app-footer',
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
@@ -132,7 +132,8 @@ import { RouterModule } from "@angular/router";
                   ></path>
                 </svg>
                 <p class="text-gray-600 text-sm">
-                  +91 95663 48780<br />+91 99625 45546
+                  <a href="tel:+919566348780">+91 95663 48780</a><br />
+                  <a href="tel:+919962545546">+91 99625 45546</a>
                 </p>
               </div>
               <div class="flex items-center space-x-3">
@@ -150,7 +151,7 @@ import { RouterModule } from "@angular/router";
                   ></path>
                 </svg>
                 <p class="text-gray-600 text-sm">
-                  i2ismartenterprises&#64;gmail.com
+                  <a href="mailto:i2ismartenterprises@gmail.com">i2ismartenterprises&#64;gmail.com</a>
                 </p>
               </div>
             </div>

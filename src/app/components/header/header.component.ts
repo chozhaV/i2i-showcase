@@ -17,7 +17,7 @@ import { RouterModule, Router } from "@angular/router";
       <nav class="container mx-auto px-4 py-4">
         <div class="flex items-center justify-between">
           <!-- Logo -->
-          <div class="flex items-center space-x-3">
+          <div class="flex items-center space-x-3 cursor-pointer" routerLink="/">
             <div
               class="w-10 h-10 from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center"
             >
@@ -139,34 +139,7 @@ import { RouterModule, Router } from "@angular/router";
       .mobile-nav-link {
         @apply block py-2 px-4 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-all duration-300;
       }
-      .i2i-light-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background-color: white;
-        color: #004A99;
-        border: 2px solid #004A99;
-        border-radius: 8px;
-        padding: 14px 18px;
-        font-weight: 600;
-        font-family: 'Segoe UI', sans-serif;
-        font-size: 15px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-      .i2i-light-button img {
-        height: 22px;
-        width: auto;
-      }
-
-      .i2i-light-button:hover {
-        background-color: #004A99;
-        color: white;
-      }
-
-      .i2i-light-button:active {
-        transform: scale(0.98);
-      }
+      
 
     `,
   ],

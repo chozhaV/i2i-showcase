@@ -5,15 +5,15 @@ import {
   AfterViewInit,
   ElementRef,
   ViewChild,
-} from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule, Router } from "@angular/router";
-import { ProductService } from "../../services/product.service";
-import { Product, ProductCategory } from "../../models/product.model";
-import { Subject, takeUntil } from "rxjs";
+} from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
+import { ProductService } from '../../services/product.service';
+import { Product, ProductCategory } from '../../models/product.model';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
@@ -154,7 +154,10 @@ import { Subject, takeUntil } from "rxjs";
                 </div>
 
                 <!-- Features and Specifications Side by Side on Mobile/Tablet -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" *ngIf="product.features.length">
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 gap-6"
+                  *ngIf="product.features.length"
+                >
                   <!-- Features -->
                   <div class="space-y-3">
                     <h4 class="text-xl font-semibold text-gray-900">
@@ -256,38 +259,10 @@ import { Subject, takeUntil } from "rxjs";
   `,
   styles: [
     `
-    div.card {
-      box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19)
-    }
-    .i2i-light-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background-color: white;
-      color: #004A99;
-      border: 2px solid #004A99;
-      border-radius: 8px;
-      padding: 14px 18px;
-      font-weight: 600;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 15px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .i2i-light-button img {
-      height: 22px;
-      width: auto;
-    }
-
-    .i2i-light-button:hover {
-      background-color: #004A99;
-      color: white;
-    }
-
-    .i2i-light-button:active {
-      transform: scale(0.98);
-    }
+      div.card {
+        box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2),
+          0 0px 0px 0 rgba(0, 0, 0, 0.19);
+      }
 
       .product-item {
         opacity: 0;
@@ -430,8 +405,8 @@ import { Subject, takeUntil } from "rxjs";
 
       .button-brand {
         color: #fff;
-        background: #43b02a;           /* Green from logo */
-        border: 2px solid #ffd600;     /* Yellow from logo */
+        background: #43b02a; /* Green from logo */
+        border: 2px solid #ffd600; /* Yellow from logo */
         padding: 0.75rem 2rem;
         border-radius: 0.75rem;
         font-size: 1.125rem;
@@ -445,14 +420,14 @@ import { Subject, takeUntil } from "rxjs";
 
       .button-brand:hover,
       .button-brand:focus {
-        background: #388e1c;           /* Darker green on hover */
-        border-color: #ffea00;         /* Lighter yellow on hover */
+        background: #388e1c; /* Darker green on hover */
+        border-color: #ffea00; /* Lighter yellow on hover */
       }
     `,
   ],
 })
 export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
-  @ViewChild("productsSection") productsSection!: ElementRef;
+  @ViewChild('productsSection') productsSection!: ElementRef;
 
   private destroy$ = new Subject<void>();
 
@@ -487,13 +462,13 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public scrollToProducts(): void {
     this.productsSection.nativeElement.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+      behavior: 'smooth',
+      block: 'start',
     });
   }
 
   public navigateToContact(): void {
-    this.router.navigate(["/contact"]);
+    this.router.navigate(['/contact']);
   }
 
   getCategoryName(categoryId: string): string {
@@ -508,7 +483,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   getQuote(product: Product): void {
-    this.router.navigate(["/contact"], {
+    this.router.navigate(['/contact'], {
       queryParams: {
         product: product.name,
         sku: product.sku,
@@ -518,29 +493,29 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   learnMore(product: Product): void {
     // Scroll to product or show more details
-    console.log("Learn more about:", product.name);
+    console.log('Learn more about:', product.name);
   }
 
   private setupScrollAnimations(): void {
     const observerOptions = {
       threshold: 0.2,
-      rootMargin: "0px 0px -100px 0px",
+      rootMargin: '0px 0px -100px 0px',
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
+          entry.target.classList.add('animate');
         }
       });
     }, observerOptions);
 
     // Observe product items
     setTimeout(() => {
-      const productItems = document.querySelectorAll(".product-item");
+      const productItems = document.querySelectorAll('.product-item');
       productItems.forEach((item) => observer.observe(item));
 
-      const animatedElements = document.querySelectorAll(".animate-on-scroll");
+      const animatedElements = document.querySelectorAll('.animate-on-scroll');
       animatedElements.forEach((el) => observer.observe(el));
     }, 100);
   }

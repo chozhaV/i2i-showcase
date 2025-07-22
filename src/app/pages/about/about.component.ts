@@ -1,9 +1,9 @@
-import { Component, AfterViewInit } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
+import { Component, AfterViewInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: "app-about",
+  selector: 'app-about',
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
@@ -414,30 +414,21 @@ import { RouterModule } from "@angular/router";
         </section>
 
         <!-- CTA Section -->
-        <section class="text-center relative z-10">
-          <div
-            class="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 md:p-12"
-          >
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Partner with Us?
-            </h2>
-            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help transform your business with our
-              innovative technology solutions.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                class="bg-white text-primary-600 hover:bg-primary-50 font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                routerLink="/contact"
-              >
-                Get in Touch
-              </button>
-              <button
-                class="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300"
-                routerLink="/products"
-              >
-                View Our Products
-              </button>
+        <section class="py-20">
+          <div class="container mx-auto px-4">
+            <div class="bg-white rounded-2xl p-8 md:p-12 text-center card">
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-600 mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+                Get in touch with our experts to discuss your technology needs
+                and discover how we can help you achieve your goals.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="i2i-light-button" routerLink="/contact">
+                  Contact Us Today
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -461,29 +452,29 @@ export class AboutComponent implements AfterViewInit {
   private setupScrollAnimations(): void {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
+      rootMargin: '0px 0px -50px 0px',
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
+          entry.target.classList.add('animate');
         }
       });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll(".animate-on-scroll");
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach((el) => observer.observe(el));
   }
 
   private setupParallaxEffects(): void {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       const scrolled = window.pageYOffset;
-      const parallaxElements = document.querySelectorAll(".parallax-element");
+      const parallaxElements = document.querySelectorAll('.parallax-element');
 
       parallaxElements.forEach((element) => {
         const speed = parseFloat(
-          (element as HTMLElement).dataset["speed"] || "0.5"
+          (element as HTMLElement).dataset['speed'] || '0.5'
         );
         const yPos = -(scrolled * speed);
         (
